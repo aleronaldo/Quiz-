@@ -1,4 +1,4 @@
-# nome dos integrantes: Alexandre Ronaldo
+# NOME: Alexandre Ronaldo
 
 # 🎮 QuizMania — Quiz Interativo
 
