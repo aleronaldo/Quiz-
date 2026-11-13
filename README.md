@@ -1,4 +1,4 @@
-# NOME: Alexandre Ronaldo
+# NOME: Alexandre Ronaldo e Guilherme Ceda
 
 # 🎮 QuizMania — Quiz Interativo
 
