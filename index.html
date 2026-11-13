@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuizMania: teste seus conhecimentos em um quiz divertido.">
+  <title>QuizMania | Desafio do Conhecimento</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="perguntas.js" defer></script>
+  <script src="quiz.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topo">
+      <a class="marca" href="index.html">🎮 Quiz<span>Mania</span></a>
+      <span class="selo">Desafio do Conhecimento ✨</span>
+    </header>
+
+    <section class="painel" id="inicio" aria-labelledby="titulo-inicio">
+      <div class="ilustracao" aria-hidden="true">🧠 <span>⚡</span> 🎯</div>
+      <p class="sobretitulo">PREPARE-SE PARA O DESAFIO!</p>
+      <h1 id="titulo-inicio">Mostre o que você <span>sabe!</span></h1>
+      <p class="descricao">Responda perguntas, vença o relógio e conquiste a melhor pontuação.</p>
+
+      <form id="form-inicio" novalidate>
+        <label for="nome">Seu nome</label>
+        <input id="nome" name="nome" type="text" maxlength="30"
+          placeholder="Digite seu nome" autocomplete="given-name" required>
+        <p class="erro" id="erro-nome" role="alert"></p>
+
+        <label for="categoria">Escolha sua categoria</label>
+        <select id="categoria" name="categoria" required>
+          <option value="">Selecione uma categoria</option>
+          <option value="tecnologia">💻 Tecnologia</option>
+          <option value="geral">🌎 Conhecimentos Gerais</option>
+          <option value="games">🕹️ Games</option>
+        </select>
+        <p class="erro" id="erro-categoria" role="alert"></p>
+
+        <button class="botao principal" type="submit">Começar quiz 🚀</button>
+      </form>
+    </section>
+
+    <section class="painel oculto" id="jogo" aria-labelledby="pergunta" aria-hidden="true">
+      <div class="linha-status">
+        <span id="saudacao"></span>
+        <span id="pontuacao">⭐ 0 pontos</span>
+      </div>
+      <div class="linha-status">
+        <span id="contador">Pergunta 1 de 5</span>
+        <span class="relogio" id="tempo">⏱️ 15s</span>
+      </div>
+
+      <div class="barra" role="progressbar" aria-label="Progresso do quiz"
+        aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progresso">
+        <div id="barra-progresso"></div>
+      </div>
+
+      <p class="sobretitulo" id="categoria-atual"></p>
+      <h2 id="pergunta"></h2>
+      <div id="alternativas" class="alternativas" role="group"
+        aria-label="Alternativas da pergunta"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+
+      <button class="botao principal oculto" id="proxima" type="button">
+        Próxima pergunta →
+      </button>
+    </section>
+
+    <section class="painel resultado oculto" id="resultado"
+      aria-labelledby="titulo-resultado" aria-hidden="true">
+      <div class="trofeu" aria-hidden="true">🏆</div>
+      <h2 id="titulo-resultado">Quiz finalizado!</h2>
+      <p id="mensagem-resultado"></p>
+      <p class="placar" id="placar-final"></p>
+      <p id="detalhes-resultado"></p>
+      <button class="botao principal" id="reiniciar" type="button">
+        Jogar novamente 🔄
+      </button>
+    </section>
+
+    <footer>
+      Feito com 💜 usando HTML, CSS e JavaScript • Projeto acadêmico
+    </footer>
+  </main>
+</body>
+</html>
