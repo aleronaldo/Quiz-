@@ -1,3 +1,5 @@
+#nome dos integrantes: Alexandre Ronaldo
+
 # 🎮 QuizMania — Quiz Interativo
 
 ## 📖 Sobre o projeto
